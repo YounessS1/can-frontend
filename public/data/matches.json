@@ -1,115 +1,20 @@
 [
   {
-    "id": "A1",
+    "id": "M1",
+    "date": "2025-01-13T20:00:00Z",
+    "stadium": "Rabat",
     "group": "A",
-    "homeTeam": "Comoros",
-    "awayTeam": "Morocco",
-    "score": { "home": 0, "away": 2 },
-    "date": "2025-12-21",
-    "stadium": "Rabat"
+    "homeTeamId": "MAR",
+    "awayTeamId": "SEN",
+    "score": { "home": 2, "away": 1 }
   },
   {
-    "id": "A2",
-    "group": "A",
-    "homeTeam": "Zambia",
-    "awayTeam": "Mali",
-    "score": { "home": 1, "away": 1 },
-    "date": "2025-12-22",
-    "stadium": "Casablanca"
-  },
-
-  {
-    "id": "B1",
+    "id": "M2",
+    "date": "2025-01-14T17:00:00Z",
+    "stadium": "Casablanca",
     "group": "B",
-    "homeTeam": "Angola",
-    "awayTeam": "South Africa",
-    "score": { "home": 1, "away": 2 },
-    "date": "2025-12-22",
-    "stadium": "Agadir"
-  },
-  {
-    "id": "B2",
-    "group": "B",
-    "homeTeam": "Zimbabwe",
-    "awayTeam": "Egypt",
-    "score": { "home": 1, "away": 2 },
-    "date": "2025-12-23",
-    "stadium": "Marrakech"
-  },
-
-  {
-    "id": "C1",
-    "group": "C",
-    "homeTeam": "Tanzania",
-    "awayTeam": "Nigeria",
-    "score": { "home": 1, "away": 2 },
-    "date": "2025-12-23",
-    "stadium": "Fès"
-  },
-  {
-    "id": "C2",
-    "group": "C",
-    "homeTeam": "Uganda",
-    "awayTeam": "Tunisia",
-    "score": { "home": 1, "away": 3 },
-    "date": "2025-12-24",
-    "stadium": "Oujda"
-  },
-
-  {
-    "id": "D1",
-    "group": "D",
-    "homeTeam": "Benin",
-    "awayTeam": "DR Congo",
-    "score": { "home": 0, "away": 1 },
-    "date": "2025-12-24",
-    "stadium": "Tanger"
-  },
-  {
-    "id": "D2",
-    "group": "D",
-    "homeTeam": "Botswana",
-    "awayTeam": "Senegal",
-    "score": { "home": 0, "away": 3 },
-    "date": "2025-12-25",
-    "stadium": "Casablanca"
-  },
-
-  {
-    "id": "E1",
-    "group": "E",
-    "homeTeam": "Equatorial Guinea",
-    "awayTeam": "Burkina Faso",
-    "score": { "home": 1, "away": 2 },
-    "date": "2025-12-25",
-    "stadium": "Rabat"
-  },
-  {
-    "id": "E2",
-    "group": "E",
-    "homeTeam": "Sudan",
-    "awayTeam": "Algeria",
-    "score": { "home": 0, "away": 3 },
-    "date": "2025-12-26",
-    "stadium": "Meknès"
-  },
-
-  {
-    "id": "F1",
-    "group": "F",
-    "homeTeam": "Mozambique",
-    "awayTeam": "Ivory Coast",
-    "score": { "home": 0, "away": 1 },
-    "date": "2025-12-26",
-    "stadium": "Agadir"
-  },
-  {
-    "id": "F2",
-    "group": "F",
-    "homeTeam": "Gabon",
-    "awayTeam": "Cameroon",
-    "score": { "home": 0, "away": 1 },
-    "date": "2025-12-27",
-    "stadium": "Marrakech"
+    "homeTeamId": "EGY",
+    "awayTeamId": "RSA",
+    "score": { "home": 1, "away": 1 }
   }
 ]

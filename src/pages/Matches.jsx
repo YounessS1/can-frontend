@@ -1,35 +1,38 @@
 import { useEffect, useState } from "react";
-import { getMatches } from "../services/api";
+import { getMatches, getTeams } from "../services/api";
 
 export default function Matches() {
   const [matches, setMatches] = useState([]);
-  const [error, setError] = useState(null);
+  const [teams, setTeams] = useState({});
 
   useEffect(() => {
-    getMatches()
-      .then(setMatches)
-      .catch((err) => setError(err.message));
+    getMatches().then(setMatches);
+    getTeams().then((data) => {
+      const map = {};
+      data.forEach((t) => (map[t.id] = t.name));
+      setTeams(map);
+    });
   }, []);
-
-  if (error) return <p>❌ {error}</p>;
 
   return (
     <div>
-      <h2>⚽ Matchs – CAN 2025</h2>
+      <h2>⚽ Matches – CAN 2025</h2>
 
-      {matches.map((match) => (
-        <div key={match.id} style={{ marginBottom: "1rem" }}>
-          <strong>
-            {match.homeTeam} vs {match.awayTeam}
-          </strong>
-          <p>Date : {match.date}</p>
-          <p>Stade : {match.stadium}</p>
-          {match.score && (
-            <p>
-              Score : {match.score.home} – {match.score.away}
-            </p>
-          )}
-          <hr />
+      {matches.map((m) => (
+        <div
+          key={m.id}
+          style={{ border: "1px solid #ccc", margin: 10, padding: 10 }}
+        >
+          <p>
+            <strong>
+              {teams[m.homeTeamId]} vs {teams[m.awayTeamId]}
+            </strong>
+          </p>
+          <p>📍 {m.stadium}</p>
+          <p>🗓 {new Date(m.date).toLocaleString()}</p>
+          <p>
+            Score : {m.score.home} – {m.score.away}
+          </p>
         </div>
       ))}
     </div>

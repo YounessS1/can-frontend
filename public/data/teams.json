@@ -1,0 +1,6 @@
+[
+  { "id": "MAR", "name": "Morocco", "group": "A" },
+  { "id": "SEN", "name": "Senegal", "group": "A" },
+  { "id": "EGY", "name": "Egypt", "group": "B" },
+  { "id": "RSA", "name": "South Africa", "group": "B" }
+]

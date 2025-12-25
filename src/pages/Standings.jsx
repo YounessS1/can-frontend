@@ -1,45 +1,47 @@
 import { useEffect, useState } from "react";
-import { getStandings } from "../services/api";
+import { getStandings, getTeams } from "../services/api";
 
 export default function Standings() {
-  const [groups, setGroups] = useState({});
+  const [standings, setStandings] = useState([]);
+  const [teams, setTeams] = useState({});
 
   useEffect(() => {
-    getStandings().then(setGroups).catch(console.error);
+    getStandings().then(setStandings);
+    getTeams().then((data) => {
+      const map = {};
+      data.forEach((t) => (map[t.id] = t.name));
+      setTeams(map);
+    });
   }, []);
 
   return (
     <div>
-      <h2>📊 Classements – CAN 2025</h2>
+      <h2>📊 Classement – CAN 2025</h2>
 
-      {Object.keys(groups).map((group) => (
-        <div key={group}>
-          <h3>Groupe {group}</h3>
-
-          <table border="1" cellPadding="6">
-            <thead>
-              <tr>
-                <th>Équipe</th>
-                <th>Pts</th>
-                <th>J</th>
-                <th>BP</th>
-                <th>BC</th>
-              </tr>
-            </thead>
-            <tbody>
-              {groups[group].map((team) => (
-                <tr key={team.team}>
-                  <td>{team.team}</td>
-                  <td>{team.pts}</td>
-                  <td>{team.played}</td>
-                  <td>{team.gf}</td>
-                  <td>{team.ga}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ))}
+      <table border="1" cellPadding="8">
+        <thead>
+          <tr>
+            <th>Groupe</th>
+            <th>Équipe</th>
+            <th>J</th>
+            <th>Pts</th>
+            <th>GF</th>
+            <th>GA</th>
+          </tr>
+        </thead>
+        <tbody>
+          {standings.map((s, i) => (
+            <tr key={i}>
+              <td>{s.group}</td>
+              <td>{teams[s.teamId]}</td>
+              <td>{s.played}</td>
+              <td>{s.points}</td>
+              <td>{s.gf}</td>
+              <td>{s.ga}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
