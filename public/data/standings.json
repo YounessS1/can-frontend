@@ -1,0 +1,38 @@
+{
+  "A": [
+    { "team": "Morocco", "pts": 3, "played": 1, "gf": 2, "ga": 0 },
+    { "team": "Mali", "pts": 1, "played": 1, "gf": 1, "ga": 1 },
+    { "team": "Zambia", "pts": 1, "played": 1, "gf": 1, "ga": 1 },
+    { "team": "Comoros", "pts": 0, "played": 1, "gf": 0, "ga": 2 }
+  ],
+  "B": [
+    { "team": "Egypt", "pts": 3, "played": 1, "gf": 2, "ga": 1 },
+    { "team": "South Africa", "pts": 3, "played": 1, "gf": 2, "ga": 1 },
+    { "team": "Angola", "pts": 0, "played": 1, "gf": 1, "ga": 2 },
+    { "team": "Zimbabwe", "pts": 0, "played": 1, "gf": 1, "ga": 2 }
+  ],
+  "C": [
+    { "team": "Nigeria", "pts": 3, "played": 1, "gf": 2, "ga": 1 },
+    { "team": "Tunisia", "pts": 3, "played": 1, "gf": 3, "ga": 1 },
+    { "team": "Uganda", "pts": 0, "played": 1, "gf": 1, "ga": 3 },
+    { "team": "Tanzania", "pts": 0, "played": 1, "gf": 1, "ga": 2 }
+  ],
+  "D": [
+    { "team": "Senegal", "pts": 3, "played": 1, "gf": 3, "ga": 0 },
+    { "team": "DR Congo", "pts": 3, "played": 1, "gf": 1, "ga": 0 },
+    { "team": "Benin", "pts": 0, "played": 1, "gf": 0, "ga": 1 },
+    { "team": "Botswana", "pts": 0, "played": 1, "gf": 0, "ga": 3 }
+  ],
+  "E": [
+    { "team": "Burkina Faso", "pts": 3, "played": 1, "gf": 2, "ga": 1 },
+    { "team": "Algeria", "pts": 3, "played": 1, "gf": 3, "ga": 0 },
+    { "team": "Equatorial Guinea", "pts": 0, "played": 1, "gf": 1, "ga": 2 },
+    { "team": "Sudan", "pts": 0, "played": 1, "gf": 0, "ga": 3 }
+  ],
+  "F": [
+    { "team": "Ivory Coast", "pts": 3, "played": 1, "gf": 1, "ga": 0 },
+    { "team": "Cameroon", "pts": 3, "played": 1, "gf": 1, "ga": 0 },
+    { "team": "Gabon", "pts": 0, "played": 1, "gf": 0, "ga": 1 },
+    { "team": "Mozambique", "pts": 0, "played": 1, "gf": 0, "ga": 1 }
+  ]
+}

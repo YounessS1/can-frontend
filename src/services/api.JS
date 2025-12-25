@@ -1,11 +1,17 @@
-const AWS_API = import.meta.env.VITE_AWS_API_URL;
-const VM_API = import.meta.env.VITE_VM_API_URL;
+// src/services/api.js
 
-export const getMatches = () =>
-  fetch(`${AWS_API}/matches`).then((r) => r.json());
+export async function getMatches() {
+  const res = await fetch("/data/matches.json");
+  if (!res.ok) {
+    throw new Error("Failed to load matches");
+  }
+  return res.json();
+}
 
-export const getMatchById = (id) =>
-  fetch(`${AWS_API}/matches/${id}`).then((r) => r.json());
-
-export const getStandings = () =>
-  fetch(`${VM_API}/standings`).then((r) => r.json());
+export async function getStandings() {
+  const res = await fetch("/data/standings.json");
+  if (!res.ok) {
+    throw new Error("Failed to load standings");
+  }
+  return res.json();
+}

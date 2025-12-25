@@ -1,11 +1,22 @@
-function App() {
+// src/App.jsx
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import Matches from "./pages/Matches";
+import Standings from "./pages/Standings";
+
+export default function App() {
   return (
-    <div>
-      <h1>CAN 2025 Hub</h1>
-      <p>AWS API 1: {import.meta.env.VITE_AWS_API_1_BASE}</p>
-      <p>Azure VM: {import.meta.env.VITE_AZURE_VM_BASE}</p>
-    </div>
+    <BrowserRouter>
+      <nav style={{ marginBottom: "1rem" }}>
+        <Link to="/matches">Matchs</Link> |{" "}
+        <Link to="/standings">Classement</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Matches />} />
+        <Route path="/matches" element={<Matches />} />
+        <Route path="/standings" element={<Standings />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
